@@ -16,3 +16,8 @@
   <%= link_to('Add a window to your site', new_site_window_path(@site)) %>
   <% end %>
 </div>
+
+<h1>Windows</h1>
+<% @site.windows.each do |window| %>
+<%= image_tag window.image.url(:large) %>
+  <%end%>
